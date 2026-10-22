@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const OFFICIAL_LOGO_PATH = '/assets/aistudio/WhatsApp_Image_2026-09-29_at_16.28.24_ae632a15.jpeg';
+export const OFFICIAL_LOGO_PATH = `${import.meta.env.BASE_URL}assets/aistudio/WhatsApp_Image_2026-09-29_at_16.28.24_ae632a15.jpeg`;
 
 interface BrandLogoProps {
   currentSpace: string;
