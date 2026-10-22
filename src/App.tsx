@@ -345,10 +345,10 @@ export default function App() {
               <div className="flex items-center justify-between mb-6">
                 <div>
                   <h2 className="text-lg sm:text-xl font-black text-neutral-950">
-                    Sélection du Jour & Démonstrateurs 3D
+                    Sélection du Jour
                   </h2>
                   <p className="text-xs text-neutral-500 mt-0.5">
-                    Produits phares éligibles aux remises grossistes et visualisations immersives 360°
+                    Produits phares éligibles aux remises grossistes
                   </p>
                 </div>
 

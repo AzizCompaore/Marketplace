@@ -144,8 +144,6 @@ export const INITIAL_PRODUCTS: Product[] = [
       'https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=800&q=80',
       'https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?auto=format&fit=crop&w=800&q=80',
     ],
-    has3DModel: true,
-    model3DType: 'produce',
     specifications: {
       'Poids net': '25 kg',
       Origine: 'Côte d’Ivoire / Vallée du Bandama',
@@ -177,7 +175,6 @@ export const INITIAL_PRODUCTS: Product[] = [
     images: [
       'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=800&q=80',
     ],
-    has3DModel: false,
     specifications: {
       Volume: '20 Litres (4 bidons de 5L)',
       Enrichissement: 'Vitamine A & E',
@@ -211,8 +208,6 @@ export const INITIAL_PRODUCTS: Product[] = [
     images: [
       'https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=800&q=80',
     ],
-    has3DModel: true,
-    model3DType: 'produce',
     specifications: {
       Poids: '40 kg net',
       Calibre: 'Gros (Grade 1)',
@@ -225,7 +220,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     createdAt: '2025-02-01',
   },
 
-  // Tech & Smartphone (with 3D Viewer)
+  // Tech & Smartphone
   {
     id: 'prod-phone-pro',
     name: 'Smartphone Nova Titan Pro 5G - 256GB / 12GB RAM',
@@ -246,8 +241,6 @@ export const INITIAL_PRODUCTS: Product[] = [
       'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80',
       'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80',
     ],
-    has3DModel: true,
-    model3DType: 'phone',
     specifications: {
       Processeur: 'Octa-Core 3.2 GHz gravé en 4nm',
       Stockage: '256 Go UFS 3.1',
@@ -282,7 +275,6 @@ export const INITIAL_PRODUCTS: Product[] = [
       'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80',
       'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80',
     ],
-    has3DModel: false,
     specifications: {
       CPU: 'Intel Core i7 13ème génération 4.9GHz',
       Mémoire: '16 Go DDR5 5200MHz',
@@ -297,7 +289,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     createdAt: '2025-01-25',
   },
 
-  // Mode (with 3D Sneaker model)
+  // Mode
   {
     id: 'prod-sneakers-urban',
     name: 'Baskets Urbaines Heritage X "Ivoire Edition" (Tissu Kente & Cuir)',
@@ -318,8 +310,6 @@ export const INITIAL_PRODUCTS: Product[] = [
       'https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=800&q=80',
       'https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=800&q=80',
     ],
-    has3DModel: true,
-    model3DType: 'sneaker',
     specifications: {
       Matière: 'Cuir pleine fleur et empiècements tissés main',
       Semelle: 'Gomme antidérapante à mémoire de forme',
@@ -350,7 +340,6 @@ export const INITIAL_PRODUCTS: Product[] = [
     images: [
       'https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80',
     ],
-    has3DModel: false,
     specifications: {
       Tissu: 'Bazin 100% coton peigné supérieur 1ère qualité',
       Couleurs: 'Blanc écru, Bleu roi, Noir ébène',
@@ -363,7 +352,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     createdAt: '2025-02-07',
   },
 
-  // Maison & Bureau (with 3D Furniture model)
+  // Maison & Bureau
   {
     id: 'prod-chaise-ergonomique',
     name: 'Fauteuil de Direction Ergonomique Mesh Pro Titan (Support Lombaire 3D)',
@@ -382,8 +371,6 @@ export const INITIAL_PRODUCTS: Product[] = [
     images: [
       'https://images.unsplash.com/photo-1580481077195-c3a9927b79be?auto=format&fit=crop&w=800&q=80',
     ],
-    has3DModel: true,
-    model3DType: 'furniture',
     specifications: {
       'Capacité max': '150 kg',
       Vérin: 'Classe 4 certifié TÜV / BIFMA',
@@ -416,7 +403,6 @@ export const INITIAL_PRODUCTS: Product[] = [
     images: [
       'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=800&q=80',
     ],
-    has3DModel: false,
     specifications: {
       Résolution: '3840 x 2160 pixels (4K UHD)',
       Connectique: '3x HDMI 2.1, 2x USB, Optique, RJ45',
@@ -448,7 +434,6 @@ export const INITIAL_PRODUCTS: Product[] = [
     images: [
       'https://images.unsplash.com/photo-1608248597359-2428610d335c?auto=format&fit=crop&w=800&q=80',
     ],
-    has3DModel: false,
     specifications: {
       Contenance: '500 grammes',
       Origine: 'Korhogo, Savanes',
@@ -481,8 +466,6 @@ export const INITIAL_PRODUCTS: Product[] = [
       'https://images.unsplash.com/photo-1527281400683-1aae777175f8?auto=format&fit=crop&w=800&q=80',
       'https://images.unsplash.com/photo-1569529465841-dfecdab7503b?auto=format&fit=crop&w=800&q=80',
     ],
-    has3DModel: true,
-    model3DType: 'bottle',
     isPlus18: true,
     specifications: {
       'Degré d’alcool': '43% Vol.',
@@ -514,7 +497,6 @@ export const INITIAL_PRODUCTS: Product[] = [
     images: [
       'https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?auto=format&fit=crop&w=800&q=80',
     ],
-    has3DModel: false,
     isPlus18: true,
     specifications: {
       Contenu: '10 modules Robusto & Humidor',
@@ -787,5 +769,4 @@ export const INITIAL_AD_CAMPAIGNS: AdCampaign[] = [
     badgeText: 'B2B Vérifié',
   },
 ];
-
 

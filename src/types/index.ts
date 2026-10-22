@@ -46,8 +46,6 @@ export interface Product {
   isWholesaleEligible: boolean; // Enables the +5% per 10 units rule from Cahier des charges V2
   brand?: string;
   images: string[];
-  has3DModel?: boolean;
-  model3DType?: 'phone' | 'sneaker' | 'produce' | 'bottle' | 'furniture';
   unitLabel?: string; // e.g. "Sac 25kg", "Kg", "Carton de 12", "Pièce"
   isFresh?: boolean;
   freshnessGuarantee?: string;

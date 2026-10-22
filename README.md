@@ -12,7 +12,7 @@ Le projet est organisé selon une architecture bi-dossier propre :
 .
 ├── frontend/                     # Application Frontend React
 │   ├── src/
-│   │   ├── components/           # Composants React (Navbar, Hero, Modals, 3D, Dashboards...)
+│   │   ├── components/           # Composants React (Navbar, Hero, Modals, Dashboards...)
 │   │   ├── data/                 # Données initiales (Univers, Produits, Vendeurs, Boutiques...)
 │   │   ├── types/                # Types TypeScript stricts
 │   │   ├── utils/                # Moteur de tarification dégressive (+5% / 10 unités)
@@ -48,7 +48,7 @@ Le projet est organisé selon une architecture bi-dossier propre :
 1. **5 Espaces Commerciaux Distincts** :
    - **Shopping** : Marketplace générale couvrant les 10 univers.
    - **Supermarché** : Vivriers, produits frais de Côte d'Ivoire, conditionnements au kilo/sac.
-   - **Galerie** : Sélection exclusive & luxe, vue 3D interactive.
+   - **Galerie** : Sélection exclusive & luxe.
    - **Business** : Espace grossistes, demande de devis B2B, tarification par volume.
    - **+18** : Espace réservé avec vérification d'âge et avertissement de conformité.
 

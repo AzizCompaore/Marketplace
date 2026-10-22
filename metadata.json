@@ -1,6 +1,6 @@
 {
   "name": "AgriVigil AI & G-Marketplace",
-  "description": "Plateforme e-commerce multi-vendeurs avec moteur de recherche central, tarification dégressive grossiste, visualisation 3D, espaces Shopping, Supermarché, Galerie, Business et +18.",
+  "description": "Plateforme e-commerce multi-vendeurs avec moteur de recherche central, tarification dégressive grossiste, espaces Shopping, Supermarché, Galerie, Business et +18.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

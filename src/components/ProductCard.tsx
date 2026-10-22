@@ -1,7 +1,7 @@
 import React from 'react';
 import { Product } from '../types';
 import { formatFCFA } from '../utils/pricing';
-import { Sparkles, Heart, Eye, ShoppingCart, CheckCircle2 } from 'lucide-react';
+import { Heart, Eye, ShoppingCart, CheckCircle2 } from 'lucide-react';
 
 interface ProductCardProps {
   product: Product;
@@ -38,13 +38,6 @@ export const ProductCard: React.FC<ProductCardProps> = ({
             <span className="bg-neutral-900/90 text-white text-[10px] font-black px-2 py-0.5 rounded-md shadow-xs backdrop-blur-xs flex items-center gap-1 border border-neutral-700">
               <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-ping"></span>
               GROSSISTE -5% / 10u
-            </span>
-          )}
-
-          {product.has3DModel && (
-            <span className="bg-red-600/95 text-white text-[10px] font-bold px-2 py-0.5 rounded-md shadow-xs backdrop-blur-xs flex items-center gap-1">
-              <Sparkles className="w-2.5 h-2.5" />
-              Vue 3D 360°
             </span>
           )}
 

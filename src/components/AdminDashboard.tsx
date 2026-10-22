@@ -180,7 +180,6 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                 <ul className="list-disc list-inside space-y-1 text-neutral-600">
                   <li>Page d’accueil épurée inspirée d’un moteur de recherche centralisé active.</li>
                   <li>Barème dégressif officiel grossiste calculé côté serveur (+5% chaque 10 unités atteintes).</li>
-                  <li>Visualisation interactive 3D WebGL à 360° pour les articles compatibles.</li>
                   <li>Séparation étanche des 5 espaces commerciaux (Shopping, Supermarché, Galerie, Business, +18).</li>
                   <li>Règle de redirection logo : Accueil vers « À propos », autres pages vers « Accueil ».</li>
                 </ul>

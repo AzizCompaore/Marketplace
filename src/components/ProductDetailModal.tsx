@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
 import { Product, ProductVariant } from '../types';
 import { formatFCFA, calculateLinePricing, generateWholesaleTiers } from '../utils/pricing';
-import { Product3DViewer } from './Product3DViewer';
 import {
   X,
   ShieldCheck,
   Truck,
   Heart,
   ShoppingBag,
-  Sparkles,
-  Layers,
   ArrowRight,
   Store,
   CheckCircle2,
@@ -36,7 +33,6 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
   if (!isOpen || !product) return null;
 
   const [quantity, setQuantity] = useState<number>(1);
-  const [activeTab, setActiveTab] = useState<'images' | '3d'>('images');
   const [selectedImageIndex, setSelectedImageIndex] = useState<number>(0);
   const [selectedVariant, setSelectedVariant] = useState<ProductVariant | undefined>(undefined);
 
@@ -77,84 +73,45 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
         </div>
 
         <div className="p-6 grid grid-cols-1 md:grid-cols-2 gap-8 max-h-[80vh] overflow-y-auto">
-          {/* Left Column: Visual Media Gallery or 3D */}
+          {/* Product photo gallery */}
           <div className="flex flex-col gap-4">
-            {/* View Mode Switcher (Gallery vs 3D) */}
-            {product.has3DModel && (
-              <div className="flex items-center justify-center p-1 bg-neutral-100 rounded-xl gap-1">
-                <button
-                  type="button"
-                  onClick={() => setActiveTab('images')}
-                  className={`flex-1 flex items-center justify-center gap-2 py-2 text-xs font-semibold rounded-lg transition-all ${
-                    activeTab === 'images'
-                      ? 'bg-white text-neutral-900 shadow-sm'
-                      : 'text-neutral-600 hover:text-neutral-900'
-                  }`}
-                >
-                  <Layers className="w-4 h-4" />
-                  Galerie Photos ({product.images.length})
-                </button>
-
-                <button
-                  type="button"
-                  onClick={() => setActiveTab('3d')}
-                  className={`flex-1 flex items-center justify-center gap-2 py-2 text-xs font-semibold rounded-lg transition-all ${
-                    activeTab === '3d'
-                      ? 'bg-neutral-900 text-white shadow-sm'
-                      : 'text-neutral-600 hover:text-neutral-900'
-                  }`}
-                >
-                  <Sparkles className="w-4 h-4 text-red-500" />
-                  Visualisation 3D 360°
-                </button>
-              </div>
-            )}
-
-            {/* Main Visual Display */}
-            {activeTab === '3d' && product.has3DModel ? (
-              <Product3DViewer
-                modelType={product.model3DType || 'phone'}
-                productName={product.name}
-              />
-            ) : (
-              <div className="flex flex-col gap-3">
-                <div className="relative aspect-square w-full rounded-2xl overflow-hidden bg-neutral-100 border border-neutral-200">
-                  <img
-                    src={product.images[selectedImageIndex] || product.images[0]}
-                    alt={product.name}
-                    className="w-full h-full object-cover object-center transition-all duration-300"
-                  />
-                  {product.isWholesaleEligible && (
-                    <span className="absolute top-3 left-3 bg-red-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow-md">
-                      Éligible Vente en Gros (-5% / 10u)
-                    </span>
-                  )}
-                  {product.isFresh && (
-                    <span className="absolute top-3 right-3 bg-emerald-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow-md">
-                      Frais & Vivrier
-                    </span>
-                  )}
-                </div>
-
-                {/* Thumbnail Strip */}
-                {product.images.length > 1 && (
-                  <div className="flex items-center gap-2 overflow-x-auto pb-1">
-                    {product.images.map((img, idx) => (
-                      <button
-                        key={idx}
-                        type="button"
-                        onClick={() => setSelectedImageIndex(idx)}
-                        className={`relative w-16 h-16 rounded-xl overflow-hidden border-2 transition-all flex-shrink-0 ${
-                          selectedImageIndex === idx ? 'border-red-600 ring-2 ring-red-100' : 'border-neutral-200 hover:border-neutral-300'
-                        }`}
-                      >
-                        <img src={img} alt={`Aperçu ${idx + 1}`} className="w-full h-full object-cover" />
-                      </button>
-                    ))}
-                  </div>
+            <div className="flex flex-col gap-3">
+              <div className="relative aspect-square w-full rounded-2xl overflow-hidden bg-neutral-100 border border-neutral-200">
+                <img
+                  src={product.images[selectedImageIndex] || product.images[0]}
+                  alt={product.name}
+                  className="w-full h-full object-cover object-center transition-all duration-300"
+                />
+                {product.isWholesaleEligible && (
+                  <span className="absolute top-3 left-3 bg-red-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow-md">
+                    Éligible Vente en Gros (-5% / 10u)
+                  </span>
+                )}
+                {product.isFresh && (
+                  <span className="absolute top-3 right-3 bg-emerald-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow-md">
+                    Frais & Vivrier
+                  </span>
                 )}
               </div>
-            )}
+
+              {/* Thumbnail Strip */}
+              {product.images.length > 1 && (
+                <div className="flex items-center gap-2 overflow-x-auto pb-1">
+                  {product.images.map((img, idx) => (
+                    <button
+                      key={idx}
+                      type="button"
+                      onClick={() => setSelectedImageIndex(idx)}
+                      className={`relative w-16 h-16 rounded-xl overflow-hidden border-2 transition-all flex-shrink-0 ${
+                        selectedImageIndex === idx ? 'border-red-600 ring-2 ring-red-100' : 'border-neutral-200 hover:border-neutral-300'
+                      }`}
+                    >
+                      <img src={img} alt={`Aperçu ${idx + 1}`} className="w-full h-full object-cover" />
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
 
             {/* Vendor Credibility Card */}
             <div className="p-4 rounded-xl border border-neutral-200 bg-neutral-50/70 flex items-center justify-between">

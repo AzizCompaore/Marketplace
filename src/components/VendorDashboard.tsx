@@ -67,7 +67,6 @@ export const VendorDashboard: React.FC<VendorDashboardProps> = ({
   const [formPrice, setFormPrice] = useState(10000);
   const [formStock, setFormStock] = useState(100);
   const [formIsWholesale, setFormIsWholesale] = useState(currentVendor.type === 'wholesale');
-  const [formHas3D, setFormHas3D] = useState(false);
   const [formUnit, setFormUnit] = useState('Sac de 25 kg');
 
   // Simulator base price
@@ -81,7 +80,6 @@ export const VendorDashboard: React.FC<VendorDashboardProps> = ({
     setFormPrice(10000);
     setFormStock(50);
     setFormIsWholesale(currentVendor.type === 'wholesale');
-    setFormHas3D(false);
     setActiveTab('add_product');
   };
 
@@ -104,8 +102,6 @@ export const VendorDashboard: React.FC<VendorDashboardProps> = ({
       images: [
         'https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=80',
       ],
-      has3DModel: formHas3D,
-      model3DType: 'produce',
       specifications: {
         Fournisseur: currentVendor.companyName,
         Origine: 'Côte d’Ivoire',
@@ -250,7 +246,6 @@ export const VendorDashboard: React.FC<VendorDashboardProps> = ({
                           <span>{p.universe} / {p.category}</span>
                           <span>·</span>
                           <span>Stock: {p.stock}</span>
-                          {p.has3DModel && <span className="text-red-600 font-bold">Modèle 3D Actif</span>}
                         </div>
                       </div>
                     </div>
@@ -491,20 +486,6 @@ export const VendorDashboard: React.FC<VendorDashboardProps> = ({
                   </div>
                 </label>
 
-                <label className="flex items-center gap-3 cursor-pointer">
-                  <input
-                    type="checkbox"
-                    checked={formHas3D}
-                    onChange={(e) => setFormHas3D(e.target.checked)}
-                    className="rounded text-red-600 focus:ring-red-500 w-4 h-4"
-                  />
-                  <div>
-                    <span className="font-bold text-neutral-900">Activer le modèle 3D interactif</span>
-                    <p className="text-[11px] text-neutral-500">
-                      Génère la visualisation WebGL 360° pour les acheteurs sur la fiche produit.
-                    </p>
-                  </div>
-                </label>
               </div>
 
               <div className="flex justify-end gap-2 pt-2">
